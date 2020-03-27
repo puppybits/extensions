@@ -185,7 +185,7 @@ const run = async (): Promise<number> => {
     }
     let query = firebase
       .firestore()
-      .collection(sourceCollectionPath)
+      .collectionGroup(sourceCollectionPath)
       .limit(batch);
     if (cursor) {
       query = query.startAfter(cursor);
